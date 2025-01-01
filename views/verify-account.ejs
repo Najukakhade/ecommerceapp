@@ -1,0 +1,23 @@
+<html>
+    <body>
+     <h1> verify-account page</h1>  
+     <form action="verify-account" method="post">
+        <label for="email" class="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="verificationCode" class="otp">Enter OTP</label>
+        <input type="text" id="verificationCode" name="verificationCode" required>
+        <p id="error-message"></p>
+        <input type="submit" value="Submit">
+     </form> 
+    </body>
+
+    <script>
+        // Check if error is defined and handle it in the script
+        let errorMessage = "<%= typeof error !== 'undefined' ? error : 'false' %>";
+        
+        // If errorMessage is not 'false', display the error message
+        if (errorMessage !== 'false') {
+            document.getElementById("error-message").textContent = errorMessage;
+        }
+    </script>
+</html>
