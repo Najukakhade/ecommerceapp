@@ -9,6 +9,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!')
 });
+app.get('/Najukaa', (req, res) => {
+  res.send('Welcome to Najuka')
+});
 
 
 // start server on port
